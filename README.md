@@ -1,7 +1,7 @@
 ## Перед тем как начать писать тесты
 
 1. Установить удобное вам ИДЕ, например https://code.visualstudio.com/download
-2. качаем и устанавливаем `Node.js` (Recommended)
+2. качаем и устанавливаем `Node.js` (Recommended) https://nodejs.org/en/
 3. ставим менеджер пакетов `nvm`, для убунту это команда `sudo apt install npm`
 4. проверить версию ноды можно так `node -v`
 5. склонировать этот репозиторий себе в любое место `git clone git@github.com:ILyaLupach/qa-automation.git`
