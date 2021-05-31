@@ -23,6 +23,5 @@ describe('Mr_bit test describe', () => {
 		})
 		await (await SignupPage.SubmitBtn).click()
 		await expect(await SignupPage.Errors).toBeDisplayed()
-		await browser.pause(3000)
 	})
 })
