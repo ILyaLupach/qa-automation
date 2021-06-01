@@ -4,7 +4,7 @@
 2. качаем и устанавливаем `Node.js` (Recommended) https://nodejs.org/en/
 3. ставим менеджер пакетов `nvm`, для убунту это команда `sudo apt install npm`
 4. проверить версию ноды можно так `node -v`
-5. склонировать этот репозиторий себе в любое место `git clone git@github.com:ILyaLupach/qa-automation.git`
+5. склонировать этот репозиторий себе в любое место `git clone git@github.com:ILyaLupach/qa-automation.git` или `git clone https://github.com/ILyaLupach/qa-automation.git`
   -если вдруг гит не установлен, то установить https://git-scm.com/
 
 ## Разворачиваем проект
