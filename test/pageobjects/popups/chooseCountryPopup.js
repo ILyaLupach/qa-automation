@@ -5,6 +5,10 @@ class ChooseCountryPopup {
   get Input () { return $('#signup-country-selection .smart-select__custom') }
   get CountryList () { return $$('.smart-select__item') }
 
+  async closePopup () {
+    await (await this.CloseBtn).click()
+  }
+
   async changeFirstCountry () {
       await (await this.Input).click()
       await (await this.CountryList)[0].click()
