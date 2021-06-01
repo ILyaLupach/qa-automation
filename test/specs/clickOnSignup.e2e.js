@@ -1,5 +1,3 @@
-import ChooseCountryPopup from '../pageobjects/popups/chooseCountryPopup'
-
 describe('signup link', () => {
   beforeEach(() => {
     browser.url('https://mrbit.bet/en')
