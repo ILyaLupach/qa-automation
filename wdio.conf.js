@@ -24,7 +24,11 @@ exports.config = {
     // will be called from there.
     //
     specs: [
+<<<<<<< HEAD
         'test/**/signupOpen.e2e.js'
+=======
+        './test/specs/**/testChat.e2e.js'
+>>>>>>> cc3ac9d (first)
     ],
     // Patterns to exclude.
     exclude: [
@@ -53,7 +57,16 @@ exports.config = {
     // https://docs.saucelabs.com/reference/platforms-configurator
     //
     capabilities: [{
+<<<<<<< HEAD
         maxInstances: 3,
+=======
+
+        // maxInstances can get overwritten per capability. So if you have an in-house Selenium
+        // grid with only 5 firefox instances available you can make sure that not more than
+        // 5 instances get started at a time.
+        maxInstances: 5,
+        //
+>>>>>>> cc3ac9d (first)
         browserName: 'chrome',
 
       }],
