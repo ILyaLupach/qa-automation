@@ -1,6 +1,6 @@
 describe('betting page', () => {
   it('open betting page with CW jurisdictio', async () => {
-    browser.url('https://mrbit.bet/en')
+    await browser.url('https://mrbit.bet/en')
 
     const bettingLink = await $('a*=Sports Betting')
     await bettingLink.click()
@@ -12,6 +12,4 @@ describe('betting page', () => {
     const bettingPage = await $('#bt-inner-page')
     await expect(bettingPage).toBeDisplayed()
   })
-
-  // проверить на МТ ДЕ
 })

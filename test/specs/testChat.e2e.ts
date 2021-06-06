@@ -1,4 +1,4 @@
-import The4kChat from '../pageobjects/pages/shared/The4kChat'
+import The4kChat from '../pageobjects/shared/The4kChat'
 import MainPage from '../pageobjects/pages/main.page'
 
 describe('4k chat', () => {
@@ -21,8 +21,7 @@ describe('4k chat', () => {
     await browser.pause(2000)
     const size = await (await The4kChat.PopupChat).getSize()
     const windowSize = await browser.getWindowSize()
-    expect(await size.width).toBe(windowSize.width  - 4)
-    expect(await size.height).toBe(680)
+    await expect(size.width).toBe(windowSize.width  - 4)
   })
 
   it('open new window', async () => {
@@ -35,8 +34,8 @@ describe('4k chat', () => {
     await browser.pause(1000)
     await browser.switchToWindow(allPages[1])
 
-    expect(browser).toHaveUrlContaining('info/instructions')
+    await expect(browser).toHaveUrlContaining('info/instructions')
     const allH2 = await $$('h2')
-    expect(await allH2[1].getText()).toBe('ALTERNATIVE PAYMENT METHODS')
+    await expect(await allH2[1].getText()).toBe('ALTERNATIVE PAYMENT METHODS')
   })
 })

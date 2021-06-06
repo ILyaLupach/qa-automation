@@ -3,8 +3,8 @@ import ChooseCountryPopup from '../pageobjects/popups/chooseCountryPopup'
 
 
 describe('signUp open', () => {
-  beforeEach(() => {
-    browser.url('https://mrbit.bet/en/')
+  beforeEach(async () => {
+    await browser.url('https://mrbit.bet/en/')
   })
 
   it('open country popup from header on mobile', async () => {
@@ -29,7 +29,7 @@ describe('signUp open', () => {
   it('open country popup from header on desktop', async () => {
     await browser.setWindowSize(1366, 1024)
     await MainPage.openSignupPopup()
-    expect(await $('#signup-country-selection')).toBeDisplayedInViewport()
+    await  expect(await $('#signup-country-selection')).toBeDisplayedInViewport()
     await ChooseCountryPopup.closePopup()
     expect(await $('#signup-country-selection')).not.toBeDisplayedInViewport()
   })
@@ -37,7 +37,7 @@ describe('signUp open', () => {
   it('open country popup from header on mobile login', async () => {
     await browser.setWindowSize(360, 640)
     const loginLink = await $('a.login')
-    loginLink.click()
+    await loginLink.click()
 
     const emeilInput = await $('input[name=email]')
     await emeilInput.setValue('electronic@mail.com')
@@ -45,9 +45,9 @@ describe('signUp open', () => {
     const signupLink = await $('.login-panel__register-icon')
     await signupLink.click()
 
-    expect(await $('#signup-country-selection')).toBeDisplayedInViewport()
+    await expect(await $('#signup-country-selection')).toBeDisplayedInViewport()
     await (await $('.popup_new__close')).click()
-    expect(await $('#signup-country-selection')).not.toBeDisplayedInViewport()
+    await expect(await $('#signup-country-selection')).not.toBeDisplayedInViewport()
   })
 
   it('open country popup from gamemode on desktop', async () => {
@@ -66,8 +66,8 @@ describe('signUp open', () => {
     const adasd = await $('.gamemode__profile')
     const signupBtn = await adasd.$('a*=Sign up')
     await signupBtn.click()
-    expect(await $('#signup-country-selection')).toBeDisplayedInViewport()
+    await expect(await $('#signup-country-selection')).toBeDisplayedInViewport()
     await (await $('.popup_new__close')).click()
-    expect(await $('#signup-country-selection')).not.toBeDisplayedInViewport()
+    await expect(await $('#signup-country-selection')).not.toBeDisplayedInViewport()
   })
 })

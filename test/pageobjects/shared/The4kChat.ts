@@ -1,5 +1,3 @@
-import Page from '../page';
-
 class The4kChat {
   get ChatBtnOpen () { return $('.chat__handle') }
   get PopupChat () { return $('#dvn-widget-support-chat-app') }
@@ -20,7 +18,7 @@ class The4kChat {
     await (await this.NewWinBtn).click()
   }
 
-  async setInputValue (text) {
+  async setInputValue (text: string) {
     await (await this.ChatInput).setValue(text)
   }
 }

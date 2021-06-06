@@ -16,4 +16,4 @@ class ChooseCountryPopup {
   }
 }
 
-export default new ChooseCountryPopup();
+export default new ChooseCountryPopup()
